@@ -1,7 +1,7 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Component } from 'react';//【component】
+import PropTypes from 'prop-types';//【proptypes】
 
-class Bundle extends Component {
+class Bundle extends Component {//【component state】
   constructor(props) {
     super(props);
     this.state = {
@@ -9,17 +9,17 @@ class Bundle extends Component {
       mod: null,
     };
   }
-  componentWillMount() {
+  componentWillMount() {//【props】
     this.load(this.props);
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {//【nextprops】
     if (nextProps.load !== this.props.load) {
       this.load(nextProps);
     }
   }
 
-  load(props) {
+  load(props) {//【setstate】
     this.setState({
       mod: null,
     });
@@ -31,12 +31,12 @@ class Bundle extends Component {
     });
   }
 
-  render() {
+  render() {//【state.mod】
     return this.state.mod ? this.props.children(this.state.mod) : null;
   }
 }
 
-Bundle.propTypes = {
+Bundle.propTypes = {//【load children】
   load: PropTypes.func.isRequired,
   children: PropTypes.func.isRequired,
 };

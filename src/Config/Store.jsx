@@ -1,6 +1,6 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import reducer from '../Reducer/Index';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'; //【redux】
+import thunk from 'redux-thunk'; //【redux-thunk】
+import reducer from '../Reducer/Index'; //【reducer】
 // eslint-disable-next-line
  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

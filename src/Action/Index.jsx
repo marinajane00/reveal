@@ -1,4 +1,4 @@
-const TodoListAction = (dispatch) => {
+const TodoListAction = (dispatch) => {//【dispatch action】
   // 定义action
   const Add = { type: 'Add' };
   function Remove(i) {
@@ -17,9 +17,19 @@ const TodoListAction = (dispatch) => {
 const LikeAction = (dispatch) => {
   // 定义action
   const change = { type: 'change' };
+  const no={type:"no"};
   return {
     handleClick: () => dispatch(change),
+    handleNo:()=>dispatch(no)
   };
 };
 
-export { TodoListAction, LikeAction };
+const babylonAction = (dispatch) => {
+  // 定义action
+  const block = { type: 'block' };
+  return {
+    handleBlock: () => dispatch(block),
+  };
+}; 
+
+export { TodoListAction, LikeAction, babylonAction };

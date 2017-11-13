@@ -6,7 +6,7 @@
     ],
     "plugins": [
       "react-hot-loader/babel",
-      ["import", [{ "libraryName": "antd", "style": true }]],
+      ["import", [{ "libraryName": "antd", "style": true }]]
     ],
     "env": {
           "development": {
@@ -24,7 +24,7 @@
             "plugins": [
               ["module-resolver", {
                 "alias": {
-                    "~": ["./src"],
+                    "~": ["./src"]
                 }
               }]
             ]

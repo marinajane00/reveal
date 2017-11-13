@@ -8,5 +8,5 @@ import Like from '../Component/Like';
 function Main(props) {
   return <Like {...props} />;
 }
-
+//【container】
 export default connect(state => ({ like: state.Like }), LikeAction)(Main); // 连接redux

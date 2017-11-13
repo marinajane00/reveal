@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Pagination, Cascader } from 'antd';
+import { Link } from 'react-router-dom';//【react router-dom link】
+import { Button, Pagination, Cascader } from 'antd';//【antd】
 
-import style from './index.less';
+import style from './index.less';//【less】
 
 /* eslint-disable */
-import logo from '~/assets/yay.jpg';
+// import logo from '~/assets/yay.jpg';
 /* eslint-disable */
 
 const options = [{
@@ -32,7 +32,7 @@ const options = [{
   }],
 }];
 
-function onChange(value) {
+function onChange(value) {//【cascader】
   console.log(value);
 }
 
@@ -46,13 +46,14 @@ function App() {
       <br />
       <Cascader options={options}   onChange={onChange} placeholder="Please select" />
       <br />
-      <img src={logo} width="200" className="App-logo" alt="logo" />
+      {/* <img src={logo} width="200" className="App-logo" alt="logo" /> */}
       <br />
       <br />
       <ul>
         <li><Link to="/">index</Link></li>
         <li><Link to="/list">TodoList</Link></li>
         <li><Link to="/like">like</Link></li>
+        <li><Link to="/babylon">babylon</Link></li>
         <li><Link to="/from">from</Link></li>
         <li><Link to="/comment">comment</Link></li>
         <li><Link to="/intl">intl</Link></li>
@@ -60,6 +61,7 @@ function App() {
       <br />
       <Pagination defaultCurrent={1}  total={50} showSizeChanger />
       <br />
+      
       <br />
 
   </div>
